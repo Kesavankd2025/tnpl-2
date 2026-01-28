@@ -1,0 +1,108 @@
+/* Stylish Glass & Neon Tracing Navigation Style */
+
+.testimonial-nav {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.testimonial-nav button {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* The Neon Glow Trace */
+.testimonial-nav button::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border: 2px solid #39327f;
+    border-radius: 50%;
+    transform: scale(0);
+    opacity: 0;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    box-shadow: 0 0 20px rgba(57, 50, 127, 0.8), inset 0 0 20px rgba(57, 50, 127, 0.8);
+}
+
+.testimonial-nav button:hover::before {
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* The Background Inversion */
+.testimonial-nav button::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: #39327f;
+    transform: scale(0);
+    border-radius: 50%;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    z-index: -1;
+}
+
+.testimonial-nav button:hover::after {
+    transform: scale(1);
+}
+
+/* Icon Animation */
+.testimonial-nav button i {
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.testimonial-nav .prev-arrow:hover i {
+    transform: translateX(-5px) scale(1.1);
+}
+
+.testimonial-nav .next-arrow:hover i {
+    transform: translateX(5px) scale(1.1);
+}
+
+.testimonial-nav button:hover {
+    color: #fff;
+    transform: translateY(-5px);
+    border-color: transparent;
+}
+
+/* Floating Animation */
+@keyframes button-float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.testimonial-nav button:not(:hover) {
+    animation: button-float 4s infinite ease-in-out;
+}
+
+/* Mobile adjustments */
+@media (max-width: 767px) {
+    .testimonial-nav button {
+        width: 60px;
+        height: 60px;
+        font-size: 20px;
+    }
+}

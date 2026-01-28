@@ -1,0 +1,665 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Features - Aruna & Co. | Why Choose Us</title>
+    <meta name="description"
+        content="Discover the key features that make Aruna & Co. the preferred TNPL distributor. Quality, sustainability, and reliability.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" type="image/x-icon" href="">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/flaticon.css">
+    <link rel="stylesheet" href="assets/css/jquery-ui.css">
+    <link rel="stylesheet" href="assets/css/odometer.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/default.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <style>
+        .footer-widget.widget_nav_menu ul.list-wrap>li {
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .footer-widget.widget_nav_menu ul.list-wrap>li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--tg-secondary-color);
+            font-size: 20px;
+            line-height: 1;
+        }
+
+        /* FAQ Specific Styles */
+        .faq-search-area {
+            background: linear-gradient(135deg, #39327f 0%, #5a4db5 100%);
+            padding: 60px 0 40px;
+            /* Reduced bottom padding */
+            text-align: center;
+        }
+
+        .faq-search-box {
+            position: relative;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .faq-search-box input {
+            width: 100%;
+            padding: 20px 60px 20px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 18px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .faq-search-box input:focus {
+            outline: none;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .faq-search-box button {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #39327f;
+            color: #fff;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .faq-search-box button:hover {
+            background: #2a1f5f;
+            transform: translateY(-50%) scale(1.05);
+        }
+
+        /* Filter Buttons */
+        .faq-filters {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: nowrap;
+            gap: 10px;
+            overflow-x: auto;
+            padding-bottom: 5px;
+            /* Space for scrollbar if it appears */
+        }
+
+        .faq-filter-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: #fff;
+            padding: 14px 35px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .faq-filter-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .faq-filter-btn.active {
+            background: #fff;
+            color: #39327f;
+            border-color: #fff;
+            font-weight: 600;
+        }
+
+        .faq-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-category-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #39327f;
+            margin-bottom: 25px;
+            margin-top: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e0e0e0;
+            display: inline-block;
+        }
+
+        /* Hide category title if category is hidden */
+        .faq-category-group[style*="display: none"] {
+            display: none !important;
+        }
+
+        /* Keyframes for Filter Animation */
+        @keyframes fadeInUpSmall {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .faq-item {
+            background: #fff;
+            border-radius: 12px;
+            /* Slightly rounder */
+            margin-bottom: 20px;
+            /* Blue blur outline effect */
+            box-shadow: 0 4px 15px rgba(57, 50, 127, 0.1);
+            border: 1px solid rgba(57, 50, 127, 0.15);
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            overflow: hidden;
+            /* For filter animation */
+            animation-fill-mode: both;
+        }
+
+        .faq-item:hover {
+            /* Stronger blue glow on hover */
+            box-shadow: 0 8px 25px rgba(57, 50, 127, 0.25);
+            border-color: rgba(57, 50, 127, 0.3);
+            transform: translateY(-3px);
+        }
+
+        .faq-header {
+            padding: 25px 30px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fff;
+            transition: background 0.3s ease;
+            user-select: none;
+        }
+
+        .faq-header h5 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: 600;
+            color: #222;
+        }
+
+        .faq-icon {
+            width: 32px;
+            height: 32px;
+            background: rgba(57, 50, 127, 0.05);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            /* Bouncy transition */
+        }
+
+        .faq-icon i {
+            color: #39327f;
+            font-size: 14px;
+            transition: transform 0.4s ease;
+        }
+
+        .faq-item.active .faq-header {
+            background: #fff;
+            /* Keep white for cleaner look, or subtle gray */
+        }
+
+        .faq-item.active .faq-icon {
+            background: #39327f;
+            transform: rotate(180deg);
+            box-shadow: 0 4px 10px rgba(57, 50, 127, 0.3);
+        }
+
+        .faq-item.active .faq-icon i {
+            color: #fff;
+        }
+
+        .faq-body {
+            padding: 0 30px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), padding 0.5s ease;
+            background: #fff;
+        }
+
+        .faq-content-inner {
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.4s ease 0.1s;
+            /* Slight delay */
+        }
+
+        .faq-item.active .faq-body {
+            max-height: 500px;
+            /* Adjust as needed */
+        }
+
+        .faq-item.active .faq-content-inner {
+            opacity: 1;
+            transform: translateY(0);
+            padding-bottom: 30px;
+            /* Add padding here to the inner content */
+        }
+
+        .faq-body p {
+            margin: 0;
+            color: #555;
+            line-height: 1.7;
+            font-size: 16px;
+        }
+
+        /* Animation Class for Filter items */
+        .animate-filter-item {
+            animation: fadeInUpSmall 0.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+            opacity: 0;
+            /* Start hidden for animation */
+        }
+
+        .faq-search-area {
+            background: linear-gradient(135deg, #39327f 0%, #5a4db5 100%);
+            padding: 20px 0 40px;
+            /* Reduced bottom padding */
+            text-align: center;
+        }
+
+        /* Call to Action */
+        .faq-cta {
+            background: #f8f9fa;
+            border-radius: 20px;
+            padding: 50px;
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .faq-cta h3 {
+            color: #39327f;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        /* Menu Text Color */
+        .navbar-wrap.main-menu ul.navigation li a {
+            color: #000 !important;
+            font-weight: 500;
+        }
+
+        .navbar-wrap.main-menu ul.navigation li.active a {
+            color: #39327f !important;
+        }
+
+        .menu-area {
+            padding: 10px 0 !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Pre-loader-start -->
+    <div id="preloader">
+        <div class="tg-cube-grid">
+            <div class="tg-cube tg-cube1"></div>
+            <div class="tg-cube tg-cube2"></div>
+            <div class="tg-cube tg-cube3"></div>
+            <div class="tg-cube tg-cube4"></div>
+            <div class="tg-cube tg-cube5"></div>
+            <div class="tg-cube tg-cube6"></div>
+            <div class="tg-cube tg-cube7"></div>
+            <div class="tg-cube tg-cube8"></div>
+            <div class="tg-cube tg-cube9"></div>
+        </div>
+    </div>
+    <!-- Pre-loader-end -->
+
+    <!-- Scroll-top -->
+    <button class="scroll-top scroll-to-target" data-target="html">
+        <i class="fas fa-angle-up"></i>
+    </button>
+    <!-- Scroll-top-end-->
+
+    <!-- header-area -->
+    <header id="home">
+        <div id="sticky-header" class="menu-area transparent-header">
+            <div class="container custom-container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="mobile-nav-toggler"><i class="flaticon-layout"></i></div>
+                        <div class="menu-wrap">
+                            <nav class="menu-nav">
+                                <div class="logo">
+                                    <a href="index.html">
+                                        <img src="assets/img/logo/aruna_logo.png" alt="Aruna & Co."
+                                            style="max-width: 200px; height: auto;">
+                                    </a>
+                                </div>
+                                <div class="navbar-wrap main-menu d-none d-xl-flex">
+                                    <ul class="navigation">
+                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="about.html">About Us</a></li>
+                                        <li class="active"><a href="features.html">Features</a></li>
+                                        <li><a href="products.html">Products</a></li>
+                                        <li><a href="blog.html">Blog</a></li>
+                                        <li><a href="faq.html">FAQ</a></li>
+                                        <li><a href="contact.html">Contact</a></li>
+                                    </ul>
+                                </div>
+                                <div class="header-btn d-none d-sm-block">
+                                    <a href="products.html#order" class="tg-btn">Enquiry Now</a>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu  -->
+        <div class="mobile-menu">
+            <nav class="menu-box">
+                <div class="close-btn"><i class="fas fa-times"></i></div>
+                <div class="nav-logo">
+                    <a href="index.html">
+                        <h3 style="color: #39327f;">Aruna & Co.</h3>
+                        <p style="color: #222; margin-bottom: 0;">Authorised TNPL Distributor</p>
+                    </a>
+                </div>
+                <div class="menu-outer"></div>
+                <div class="social-links">
+                    <ul class="clearfix">
+                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="menu-backdrop"></div>
+        <!-- End Mobile Menu -->
+    </header>
+    <!-- header-area-end -->
+
+    <!-- main-area -->
+    <main class="main-area fix">
+
+        <!-- breadcrumb-area -->
+        <section class="breadcrumb-area" style="padding: 60px 0; background: #f2f2f5;">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-10">
+                        <div class="breadcrumb-content text-center">
+                            <h2 class="title" style="color: #39327f;">Our Features</h2>
+                            <nav aria-label="Breadcrumbs" class="breadcrumb-trail">
+                                <ul class="breadcrumb">
+                                    <li class="breadcrumb-item trail-item trail-begin">
+                                        <a href="index.html" style="color: #39327f;"><span>Home</span></a>
+                                    </li>
+                                    <li class="breadcrumb-item trail-item trail-end"><span
+                                            style="color: #666;">Features</span></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="video-shape one"><img src="assets/img/others/video_shape01.png" alt="shape"></div>
+            <div class="video-shape two"><img src="assets/img/others/video_shape02.png" alt="shape"></div> -->
+        </section>
+        <!-- breadcrumb-area-end -->
+
+        <!-- features-area -->
+        <section class="features-area pt-30 pb-80">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-8 col-lg-10">
+                        <div class="section-title text-center mb-60">
+                            <h2 class="title wow fadeInUp" data-wow-delay=".2s">Why Partner with Aruna & Co.?</h2>
+                            <p class="wow fadeInUp" data-wow-delay=".4s">We bring over 50 years of expertise in paper
+                                distribution, ensuring quality, reliability, and sustainable solutions for your
+                                business.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <!-- Feature 1 -->
+                    <div class="col-lg-4 col-md-6 col-sm-10">
+                        <div class="features-item mb-30 wow fadeInUp" data-wow-delay=".2s">
+                            <div class="features-icon mb-25">
+                                <i class="fas fa-certificate" style="font-size: 40px; color: #39327f;"></i>
+                            </div>
+                            <div class="features-content">
+                                <h4>Authorized TNPL Distributor</h4>
+                                <p>Guaranteeing 100% authentic, high-quality paper products directly from the mill.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div class="col-lg-4 col-md-6 col-sm-10">
+                        <div class="features-item mb-30 wow fadeInUp" data-wow-delay=".4s">
+                            <div class="features-icon mb-25">
+                                <i class="fas fa-truck-moving" style="font-size: 40px; color: #39327f;"></i>
+                            </div>
+                            <div class="features-content">
+                                <h4>Fast & Reliable Delivery</h4>
+                                <p>Efficient logistics network ensuring timely delivery across Tamil Nadu and beyond.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div class="col-lg-4 col-md-6 col-sm-10">
+                        <div class="features-item mb-30 wow fadeInUp" data-wow-delay=".6s">
+                            <div class="features-icon mb-25">
+                                <i class="fas fa-leaf" style="font-size: 40px; color: #39327f;"></i>
+                            </div>
+                            <div class="features-content">
+                                <h4>Eco-Friendly Solutions</h4>
+                                <p>Promoting sustainable paper usage with TNPL's eco-friendly product range.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Feature 4 -->
+                    <div class="col-lg-4 col-md-6 col-sm-10">
+                        <div class="features-item mb-30 wow fadeInUp" data-wow-delay=".8s">
+                            <div class="features-icon mb-25">
+                                <i class="fas fa-hand-holding-usd" style="font-size: 40px; color: #39327f;"></i>
+                            </div>
+                            <div class="features-content">
+                                <h4>Competitive Pricing</h4>
+                                <p>Best market rates for bulk and wholesale orders with transparent pricing.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Feature 5 -->
+                    <div class="col-lg-4 col-md-6 col-sm-10">
+                        <div class="features-item mb-30 wow fadeInUp" data-wow-delay="1.0s">
+                            <div class="features-icon mb-25">
+                                <i class="fas fa-users" style="font-size: 40px; color: #39327f;"></i>
+                            </div>
+                            <div class="features-content">
+                                <h4>Dedicated Support</h4>
+                                <p>Expert customer service team to assist with your specific paper requirements.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Feature 6 -->
+                    <div class="col-lg-4 col-md-6 col-sm-10">
+                        <div class="features-item mb-30 wow fadeInUp" data-wow-delay="1.2s">
+                            <div class="features-icon mb-25">
+                                <i class="fas fa-warehouse" style="font-size: 40px; color: #39327f;"></i>
+                            </div>
+                            <div class="features-content">
+                                <h4>Bulk Stock Availability</h4>
+                                <p>Large inventory maintained to fulfill urgent and large-scale orders instantly.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- features-area-end -->
+
+    </main>
+    <!-- main-area-end -->
+
+    <!-- Footer-area -->
+    <footer class="footer-area"
+        style="background: #0A0A0A; color: #fff; padding: 50px 0 20px; position: relative; margin-top: 0;">
+        <!-- Top Shape from Old Design -->
+        <div
+            style="position: absolute; left: 0; top: -22px; width: 100%; height: 53px; background-image: url('assets/img/bg/footer_bg_shape.png'); background-repeat: repeat; background-position: center; z-index: 2;">
+        </div>
+
+        <div class="container" style="position: relative; z-index: 3;">
+            <div class="row align-items-center justify-content-between">
+                <!-- Col 1: Location -->
+                <div class="col-lg-4 col-md-12 mb-4 mb-lg-0 text-center text-lg-start">
+                    <div class="footer-info">
+                        <h4 style="color: #fff; margin-bottom: 5px; font-size: 18px; font-weight: 700;">Aruna & Co.</h4>
+                        <p style="color: #ccc; margin-bottom: 0; font-size: 12px; line-height: 1.4; opacity: 0.8;">
+                            <i class="fas fa-map-marker-alt me-2" style="color: #fff; font-size: 11px;"></i>2/16, Giri
+                            Nagar, Ramapuram,<br>Chennai – 600089
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Col 2: Email -->
+                <div class="col-lg-4 col-md-12 mb-4 mb-lg-0 text-center">
+                    <div class="footer-contact" style="color: #ccc; font-size: 13px; font-weight: 500;">
+                        <a href="mailto:info@arunaco.com"
+                            style="color: inherit; text-decoration: none; transition: color 0.3s;"
+                            onmouseover="this.style.color='#fff'" onmouseout="this.style.color='inherit'">
+                            <i class="fas fa-envelope me-2" style="color: #fff; font-size: 14px;"></i>info@arunaco.com
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Col 3: Contact Number -->
+                <div class="col-lg-4 col-md-12 text-center text-lg-end">
+                    <div class="footer-contact" style="color: #ccc; font-size: 13px; font-weight: 500;">
+                        <a href="tel:+919876543210"
+                            style="color: inherit; text-decoration: none; transition: color 0.3s;"
+                            onmouseover="this.style.color='#fff'" onmouseout="this.style.color='inherit'">
+                            <i class="fas fa-phone-alt me-2" style="color: #fff; font-size: 14px;"></i>+91 98765
+                            43210
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom: Copyright Centered -->
+            <div class="row pt-4 pb-2">
+                <div class="col-12 text-center">
+                    <p class="mb-0" style="color: #ccc; font-size: 11px; opacity: 0.5;">&copy; 2026 Aruna & Co. All
+                        rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer-area-end -->
+
+    <!-- JS here -->
+    <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/jquery.odometer.min.js"></script>
+    <script src="assets/js/jquery.appear.js"></script>
+    <script src="assets/js/jquery.paroller.min.js"></script>
+    <script src="assets/js/jquery.easypiechart.min.js"></script>
+    <script src="assets/js/jquery.inview.min.js"></script>
+    <script src="assets/js/jquery.easing.js"></script>
+    <script src="assets/js/jquery-ui.min.js"></script>
+    <script src="assets/js/svg-inject.min.js"></script>
+    <script src="assets/js/jarallax.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/validator.js"></script>
+    <script src="assets/js/ajax-form.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!-- FAQ Script -->
+    <script>
+        $(document).ready(function () {
+            // FAQ Accordion
+            $('.faq-header').click(function () {
+                const item = $(this).parent();
+                const isActive = item.hasClass('active');
+
+                // Close all others
+                $('.faq-item').removeClass('active');
+
+                // Toggle clicked
+                if (!isActive) {
+                    item.addClass('active');
+                }
+            });
+
+            // Filter Buttons Logic
+            $('.faq-filter-btn').click(function () {
+                // Remove active class from all buttons
+                $('.faq-filter-btn').removeClass('active');
+                // Add active class to clicked button
+                $(this).addClass('active');
+
+                const filterValue = $(this).attr('data-filter');
+                let visibleItems;
+
+                if (filterValue === 'all') {
+                    $('.faq-category-group').show();
+                    visibleItems = $('.faq-item'); // All items
+                } else {
+                    $('.faq-category-group').hide();
+                    const activeGroup = $('.faq-category-group[data-category="' + filterValue + '"]');
+                    activeGroup.show();
+                    visibleItems = activeGroup.find('.faq-item');
+                }
+
+                // Apply Staggered Animation
+                visibleItems.each(function (index) {
+                    const item = $(this);
+
+                    // Reset animation
+                    item.removeClass('animate-filter-item');
+                    item.css('animation-delay', '');
+                    item.css('opacity', '0'); // Ensure it starts invisible
+
+                    // Force reflow
+                    void item[0].offsetWidth;
+
+                    // Apply new animation
+                    item.css('animation-delay', (index * 0.1) + 's');
+                    item.addClass('animate-filter-item');
+                });
+            });
+
+            // Trigger click on active button to initialize animation on load
+            // $('.faq-filter-btn.active').trigger('click'); // Optional: straightforward way to run initial animation
+
+
+        });
+    </script>
+</body>
+
+</html>

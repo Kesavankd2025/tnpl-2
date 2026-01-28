@@ -1,0 +1,1179 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>TNPL Spectrum - Aruna & Co.</title>
+    <meta name="description" content="TNPL Spectrum - High-quality eco-friendly copier paper.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" type="image/x-icon" href="">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Open+Sans:wght@400;600;700&family=Oswald:wght@400;500;600;700&family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Rubik+Stencil+One&display=swap"
+        rel="stylesheet">
+    <!-- Inter Font for Product Details -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/flaticon.css">
+    <link rel="stylesheet" href="assets/css/jquery-ui.css">
+    <link rel="stylesheet" href="assets/css/odometer.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/default.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+    <style>
+        :root {
+            --primary-color: #39327f;
+            --primary-dark: #2d2673;
+            --accent-color: #e8983b;
+            --text-dark: #1a1a1a;
+            --text-gray: #000000;
+            --light-bg: #f8f9fa;
+            --white: #ffffff;
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.12);
+            --border-radius-lg: 16px;
+            --border-radius-md: 12px;
+            --transition-base: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--light-bg);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Product Card Consistency */
+        .related-product-active .tg-shop-item {
+            margin: 0 15px;
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition-base);
+            height: 100%;
+        }
+
+        .related-product-active .tg-shop-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .related-product-active .tg-shop-thumb {
+            position: relative;
+            height: 220px;
+            background: #fff;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .related-product-active .tg-shop-thumb img {
+            max-height: 100%;
+            max-width: 100%;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+            border-radius: 15px;
+        }
+
+        .related-product-active .tg-shop-thumb:hover img {
+            transform: scale(1.05);
+        }
+
+        .related-product-active .tg-shop-content {
+            padding: 15px;
+            text-align: center;
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .related-product-active .tg-shop-cat a {
+            color: var(--primary-color);
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 5px;
+            display: inline-block;
+        }
+
+        .related-product-active .title a {
+            color: var(--text-dark);
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .related-product-active .title a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Slider Navigation Arrows */
+        .related-product-active .slick-arrow {
+            position: absolute;
+            bottom: -60px;
+            top: auto;
+            transform: none;
+            left: auto;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background: #fff;
+            border: 1px solid #eee;
+            border-radius: 50%;
+            color: var(--text-dark);
+            font-size: 18px;
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+            z-index: 9;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .related-product-active .slick-arrow:hover {
+            background: var(--primary-color);
+            color: #fff;
+            border-color: var(--primary-color);
+            box-shadow: 0 6px 15px rgba(0, 111, 86, 0.2);
+        }
+
+        .related-product-active .slick-prev {
+            right: 80px;
+            margin-left: 0;
+        }
+
+        .related-product-active .slick-next {
+            right: 20px;
+            margin-left: 0;
+        }
+
+        h1,
+        h2 {
+            font-family: 'Rubik Stencil One', sans-serif;
+            margin-bottom: 0.5em;
+            letter-spacing: -1px;
+        }
+
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Open Sans', sans-serif;
+            margin-bottom: 0.5em;
+        }
+
+        /* Header Utility */
+        .menu-nav {
+            padding: 15px 0;
+            transition: var(--transition-base);
+        }
+
+        .logo h3 {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin: 0;
+            letter-spacing: -0.5px;
+        }
+
+        /* Hero Section */
+        .product-hero-split {
+            position: relative;
+            background: linear-gradient(135deg, #f0f7f4 0%, #ffffff 100%);
+            padding: 60px 0;
+            overflow: hidden;
+        }
+
+        .product-hero-split::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(122, 179, 66, 0.08) 0%, rgba(255, 255, 255, 0) 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .product-hero-split h1 {
+            font-size: 72px;
+            font-weight: 800;
+            color: var(--primary-color);
+            line-height: 1.05;
+            margin-bottom: 24px;
+            position: relative;
+            z-index: 1;
+            letter-spacing: -2px;
+        }
+
+        .product-hero-split .tagline {
+            font-family: 'Inter', sans-serif;
+            font-size: 20px;
+            font-weight: 400;
+            color: var(--text-gray);
+            margin-bottom: 48px;
+            max-width: 550px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 16px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn-modern {
+            padding: 14px 32px;
+            font-weight: 600;
+            font-size: 16px;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: var(--transition-base);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-modern-primary {
+            background-color: var(--primary-color);
+            color: var(--white);
+            box-shadow: 0 8px 20px rgba(0, 111, 86, 0.2);
+        }
+
+        .btn-modern-primary:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 25px rgba(0, 111, 86, 0.3);
+            color: var(--white);
+        }
+
+        .btn-modern-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .btn-modern-outline:hover {
+            background-color: rgba(0, 111, 86, 0.05);
+            color: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .hero-image-wrapper {
+            position: relative;
+            z-index: 2;
+            perspective: 1000px;
+        }
+
+        .hero-image-wrapper img {
+            max-width: 90%;
+            height: auto;
+            filter: drop-shadow(0 30px 60px rgba(0, 0, 0, 0.15));
+            transition: var(--transition-base);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        /* Overview Section */
+        .product-overview {
+            padding: 60px 0;
+            background-image: url('assets/img/bg/product_overview_process.png');
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+
+        .product-overview::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .product-overview .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .product-overview .section-title,
+        .product-overview .overview-text {
+            color: #ffffff !important;
+        }
+
+        .section-label {
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            display: inline-block;
+            margin-bottom: 12px;
+            position: relative;
+            padding-bottom: 5px;
+        }
+
+        .section-label::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--accent-color);
+        }
+
+        /* Stats Card with Orange Border */
+        .stats-card {
+            background: #fff;
+            border: 2px solid var(--accent-color);
+            /* Orange Border */
+            border-radius: 12px;
+            padding: 50px 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: all 0.4s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .stats-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(232, 152, 59, 0.2);
+            background: #fffaf4;
+            /* Subtle orange tint on hover */
+        }
+
+        .stats-number {
+            font-size: 56px;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            line-height: 1;
+            font-family: 'Oswald', sans-serif;
+        }
+
+        .stats-number span {
+            font-size: 30px;
+            vertical-align: super;
+            margin-left: 2px;
+        }
+
+        .stats-title {
+            font-size: 18px;
+            color: #666;
+            font-weight: 500;
+            margin: 0;
+        }
+
+        .centered-label::after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        h2.section-title {
+            font-size: 42px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 24px;
+            letter-spacing: -1px;
+        }
+
+        .overview-text {
+            font-size: 19px;
+            color: var(--text-gray);
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Features / Applications Section */
+        .product-features {
+            padding: 100px 0;
+            background-color: var(--light-bg);
+        }
+
+        .feature-card {
+            background: var(--white);
+            border-radius: var(--border-radius-lg);
+            padding: 30px;
+            text-align: center;
+            transition: var(--transition-base);
+            border: 1px solid rgba(0, 0, 0, 0.03);
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--accent-color);
+            /* Orange color */
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+            transform-origin: left;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--accent-color);
+            /* Orange border on hover */
+        }
+
+        .feature-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .icon-box {
+            width: 80px;
+            height: 80px;
+            /* background: rgba(0, 111, 86, 0.08); Removed solid bg */
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            /* color: var(--primary-color); */
+            position: relative;
+            /* For absolute bg */
+            overflow: hidden;
+            /* crop blurred bg */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .feature-card:hover .icon-box {
+            background: var(--accent-color);
+            /* Orange background on hover */
+            color: var(--white);
+            transform: rotateY(180deg);
+            /* Rotate animation */
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-card:hover .icon-box i {
+            /* transform: rotateY(-180deg); */
+            display: block;
+        }
+
+        .feature-card h4 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 0;
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+        }
+
+        /* Specs Section */
+        .product-specs {
+            padding-bottom: 60px;
+            background-color: var(--light-bg);
+        }
+
+        .spec-container {
+            background: var(--white);
+            border-radius: 20px;
+            box-shadow: var(--shadow-lg);
+            padding: 60px;
+            position: relative;
+        }
+
+        .spec-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .spec-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 0;
+            border-bottom: 1px solid #eee;
+            transition: var(--transition-base);
+        }
+
+        .spec-item:hover {
+            padding-left: 10px;
+            border-color: var(--primary-color);
+        }
+
+        .spec-label {
+            font-family: 'Inter', sans-serif;
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--text-gray);
+        }
+
+        .spec-value {
+            font-family: 'Oswald', sans-serif;
+            font-size: 20px;
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 991px) {
+            .product-hero-split h1 {
+                font-size: 48px;
+            }
+
+            .hero-btns {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .btn-modern {
+                width: 100%;
+            }
+
+            .spec-container {
+                padding: 30px;
+            }
+
+            .spec-grid {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+
+            .hero-image-wrapper {
+                margin-top: 50px;
+            }
+        }
+
+        /* Navigation Menu Color Override for Product Pages */
+        .navigation li a,
+        .navbar-wrap ul li a {
+            color: #000000 !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Scroll-top -->
+    <button class="scroll-top scroll-to-target scroll-top-two" data-target="html">
+        <i class="fas fa-angle-up"></i>
+    </button>
+    <!-- Scroll-top-end-->
+
+    <!-- header-area -->
+    <header id="home">
+        <div id="header-fixed-height"></div>
+        <div id="sticky-header" class="tg-menu-area menu-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="mobile-nav-toggler"><i class="flaticon-layout"></i></div>
+                        <div class="menu-wrap">
+                            <nav class="menu-nav">
+                                <div class="logo">
+                                    <a href="index.html">
+                                        <img src="assets/img/logo/aruna_logo.png" alt="Aruna & Co."
+                                            style="max-width: 200px; height: auto;">
+                                    </a>
+                                </div>
+                                <div class="navbar-wrap main-menu d-none d-xl-flex">
+                                    <ul class="navigation">
+                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="index.html#about">About Us</a></li>
+
+                                        <li class="active"><a href="products.html">Products</a></li>
+                                        <li><a href="blog.html">Blog</a></li>
+                                        <li><a href="faq.html">FAQ</a></li>
+                                        <li><a href="contact.html">Contact</a></li>
+                                    </ul>
+                                </div>
+                                <div class="header-btn d-none d-sm-block">
+                                    <a href="contact.html" class="tg-btn">Enquiry Now</a>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-area-end -->
+
+    <!-- Mobile Menu  -->
+    <div class="mobile-menu">
+        <nav class="menu-box">
+            <div class="close-btn"><i class="fas fa-times"></i></div>
+            <div class="nav-logo">
+                <a href="index.html">
+                    <h3 style="color: #39327f;">Aruna & Co.</h3>
+                    <p style="color: #222; margin-bottom: 0;">Authorised TNPL Distributor</p>
+                </a>
+            </div>
+            <div class="menu-outer">
+                <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
+            </div>
+            <div class="social-links">
+                <ul class="clearfix">
+                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="menu-backdrop"></div>
+    <!-- End Mobile Menu -->
+
+    <main>
+
+        <!-- Product Hero -->
+        <section class="product-hero-split"
+            style="background: linear-gradient(135deg, #f0f4f8 0%, #ffffff 100%); padding: 60px 0; position: relative;">
+            <div class="product-bg-overlay"
+                style="position: absolute; top:0; left:0; width:100%; height:100%; opacity: 1; background: linear-gradient(to right, rgba(255,255,255,0.95), rgba(255,255,255,0.8)); pointer-events: none;">
+            </div>
+            <div class="container" style="position: relative; z-index: 2;">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <h1
+                            style="font-size: 48px; font-weight: 700; color: #39327f; line-height: 1.1; margin-bottom: 20px;">
+                            TNPL Spectrum</h1>
+                        <p class="tagline"
+                            style="font-size: 18px; color: #000000; margin-bottom: 40px; font-weight: 400;">
+                            Versatile, eco-friendly paper for high-volume copying and printing tasks.</p>
+
+                        <ul style="list-style: none; padding: 0; margin-bottom: 30px;">
+                            <li
+                                style="display: flex; align-items: center; margin-bottom: 12px; font-size: 16px; color: #000; background: rgba(255,255,255,0.8); padding: 10px 15px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+                                <span
+                                    style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; background: rgba(0, 0, 0, 0); border-radius: 50%; color: #000; margin-right: 12px; flex-shrink: 0;">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </span>
+                                <span><strong style="color: #000;">Smooth Surface Finish – For sharp text and vibrant
+                                        clarity.</strong></span>
+                            </li>
+                            <li
+                                style="display: flex; align-items: center; margin-bottom: 12px; font-size: 16px; color: #000; background: rgba(255,255,255,0.8); padding: 10px 15px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+                                <span
+                                    style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; background: rgba(0, 0, 0, 0); border-radius: 50%; color: #000; margin-right: 12px; flex-shrink: 0;">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </span>
+                                <span><strong style="color: #000;">Eco-Friendly Wood-Free – Sustainable and high
+                                        quality.</strong></span>
+                            </li>
+                            <li
+                                style="display: flex; align-items: center; margin-bottom: 12px; font-size: 16px; color: #000; background: rgba(255,255,255,0.8); padding: 10px 15px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+                                <span
+                                    style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; background: rgba(0, 0, 0, 0); border-radius: 50%; color: #000; margin-right: 12px; flex-shrink: 0;">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </span>
+                                <span><strong style="color: #000;">Moisture Resistant – Ensuring durability and
+                                        longevity.</strong></span>
+                            </li>
+                            <li
+                                style="display: flex; align-items: center; margin-bottom: 12px; font-size: 16px; color: #000; background: rgba(255,255,255,0.8); padding: 10px 15px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+                                <span
+                                    style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; background: rgba(0, 0, 0, 0); border-radius: 50%; color: #000; margin-right: 12px; flex-shrink: 0;">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </span>
+                                <span><strong style="color: #000;">Dimensional Stability – Reliable everyday
+                                        performance.</strong></span>
+                            </li>
+                        </ul>
+
+
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="hero-image-wrapper" style="text-align: center; position: relative; z-index: 1;">
+                            <!-- Blurred Glow Effect -->
+                            <div
+                                style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 80%; height: 80%; background-image: url('assets/img/products/tnpl_spectrum.png'); background-size: cover; background-position: center; filter: blur(40px) opacity(0.6); z-index: -1; border-radius: 50%;">
+                            </div>
+                            <img src="assets/img/products/tnpl_spectrum.png" alt="TNPL Spectrum Box"
+                                style="max-width: 80%; height: auto; filter: drop-shadow(0 20px 40px rgba(0,0,0,0.15)); border-radius: 20px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Overview -->
+        <section class="product-overview"
+            style="background-image: url('assets/img/bg/product_overview_bg_v3.png'); background-size: cover; background-position: center; padding: 100px 0; color: #333;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <span class="section-label centered-label"
+                            style="color: #39327f !important; font-weight: 700; letter-spacing: 2px;">OVERVIEW</span>
+                        <h2 class="section-title" style="color: #222; font-size: 42px; margin-bottom: 20px;">Product
+                            Overview</h2>
+                        <p class="overview-text"
+                            style="color: #555; font-size: 18px; line-height: 1.8; max-width: 800px; margin: 0 auto; font-weight: 500;">
+                            TNPL Spectrum is a versatile, eco-friendly copier paper ideal for high-volume office
+                            applications. It provides a perfect balance of quality and economy, suitable for
+                            photocopying, laser printing, and inkjet printing. Manufactured using sustainable practices,
+                            it ensures reliable performance for everyday office tasks.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Features / Ideal For -->
+        <section class="product-features" style="padding: 60px 0; background-color: #fcfcfc;">
+            <div class="container">
+                <div class="row mb-50">
+                    <div class="col-12 wow fadeInUp" data-wow-delay=".2s">
+                        <span class="section-label"
+                            style="color: #39327f; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; border-bottom: 2px solid #39327f; display: inline-block; margin-bottom: 10px;">Unique
+                            Features</span>
+                        <h2 class="feature-title" style="font-size: 36px; font-weight: 700; color: #222;">Designed for
+                            Excellence</h2>
+                        <p style="font-size: 16px; color: #555; max-width: 600px; line-height: 1.8;">Experience the
+                            superior quality of TNPL Spectrum, engineered for versatility and sustainability in every
+                            sheet.</p>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <!-- Item 1 -->
+                    <div class="col-lg-3 col-md-6 col-sm-6 mb-4 wow fadeInUp" data-wow-delay=".4s">
+                        <div class="feature-card"
+                            style="border: 1px solid #aacaf3; box-shadow: 0 5px 15px rgba(57, 50, 127, 0.1); padding: 30px 20px; border-radius: 10px; background: #fff; height: 100%; transition: all 0.3s ease;">
+                            <div class="icon-box">
+                                <i class="fas fa-layer-group" style="font-size: 40px; color: #39327f;"></i>
+                            </div>
+                            <h4 style="text-transform: uppercase; font-size: 18px; margin-top: 20px;">Smooth Finish</h4>
+                            <p style="font-size: 14px; margin-top: 10px; color: #666; margin-bottom: 0;">Ensures sharp
+                                text and vibrant clarity for all your documents.</p>
+                        </div>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="col-lg-3 col-md-6 col-sm-6 mb-4 wow fadeInUp" data-wow-delay=".5s">
+                        <div class="feature-card"
+                            style="border: 1px solid #aacaf3; box-shadow: 0 5px 15px rgba(57, 50, 127, 0.1); padding: 30px 20px; border-radius: 10px; background: #fff; height: 100%; transition: all 0.3s ease;">
+                            <div class="icon-box">
+                                <i class="fas fa-leaf" style="font-size: 40px; color: #39327f;"></i>
+                            </div>
+                            <h4 style="text-transform: uppercase; font-size: 18px; margin-top: 20px;">Eco-Friendly</h4>
+                            <p style="font-size: 14px; margin-top: 10px; color: #666; margin-bottom: 0;">Produced using
+                                sustainable, wood-free resources.</p>
+                        </div>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="col-lg-3 col-md-6 col-sm-6 mb-4 wow fadeInUp" data-wow-delay=".6s">
+                        <div class="feature-card"
+                            style="border: 1px solid #aacaf3; box-shadow: 0 5px 15px rgba(57, 50, 127, 0.1); padding: 30px 20px; border-radius: 10px; background: #fff; height: 100%; transition: all 0.3s ease;">
+                            <div class="icon-box">
+                                <i class="fas fa-tint-slash" style="font-size: 40px; color: #39327f;"></i>
+                            </div>
+                            <h4 style="text-transform: uppercase; font-size: 18px; margin-top: 20px;">Moisture Resistant
+                            </h4>
+                            <p style="font-size: 14px; margin-top: 10px; color: #666; margin-bottom: 0;">Enhanced
+                                durability and longevity for archival storage.</p>
+                        </div>
+                    </div>
+                    <!-- Item 4 -->
+                    <div class="col-lg-3 col-md-6 col-sm-6 mb-4 wow fadeInUp" data-wow-delay=".7s">
+                        <div class="feature-card"
+                            style="border: 1px solid #aacaf3; box-shadow: 0 5px 15px rgba(57, 50, 127, 0.1); padding: 30px 20px; border-radius: 10px; background: #fff; height: 100%; transition: all 0.3s ease;">
+                            <div class="icon-box">
+                                <i class="fas fa-ruler-combined" style="font-size: 40px; color: #39327f;"></i>
+                            </div>
+                            <h4 style="text-transform: uppercase; font-size: 18px; margin-top: 20px;">Dimensionally
+                                Stable</h4>
+                            <p style="font-size: 14px; margin-top: 10px; color: #666; margin-bottom: 0;">Reliable
+                                jam-free performance for high-speed printing.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Specifications -->
+        <section class="product-specs" style="padding-bottom: 0; margin-top: -40px; position: relative; z-index: 2;">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="spec-container">
+                            <div class="text-center mb-5">
+                                <span class="section-label centered-label">Details</span>
+                                <h2 class="section-title">Technical Specifications</h2>
+                            </div>
+
+                            <!-- Custom Styles for Table Animation -->
+                            <style>
+                                .spec-table-row {
+                                    transition: all 0.3s ease;
+                                    border-left: 3px solid transparent;
+                                }
+
+                                .spec-table-row:hover {
+                                    background-color: rgba(232, 152, 59, 0.1) !important;
+                                    transform: translateY(-3px) scale(1.01);
+                                    border-left: 3px solid #e8983b;
+                                    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+                                }
+
+                                .spec-table-header {
+                                    background: linear-gradient(45deg, #39327f, #2d2673) !important;
+                                    color: #fff;
+                                    box-shadow: 0 5px 15px rgba(57, 50, 127, 0.3);
+                                }
+
+                                /* Compact View Overrides */
+                                .spec-table-header th {
+                                    padding: 10px 15px !important;
+                                }
+
+                                .spec-table-row td {
+                                    padding: 8px 15px !important;
+                                }
+
+                                .table-responsive table {
+                                    border-spacing: 0 4px !important;
+                                }
+                            </style>
+
+                            <div class="table-responsive wow fadeInUp" data-wow-delay=".4s">
+                                <table class="table"
+                                    style="width: 100%; border-collapse: separate; border-spacing: 0 10px; border: none;">
+                                    <thead class="spec-table-header" style="border-radius: 8px;">
+                                        <tr>
+                                            <th
+                                                style="padding: 20px; font-weight: 700; width: 80px; border-top-left-radius: 10px; border-bottom-left-radius: 10px; border: none;">
+                                                S.No</th>
+                                            <th style="padding: 20px; font-weight: 700; border: none;">Property</th>
+                                            <th
+                                                style="padding: 20px; font-weight: 700; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border: none;">
+                                                Specification</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody style="color: #000000; font-size: 16px;">
+                                        <tr class="spec-table-row"
+                                            style="background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.03); border-radius: 8px;">
+                                            <td
+                                                style="padding: 15px 20px; border: none; border-top-left-radius: 8px; border-bottom-left-radius: 8px;">
+                                                1</td>
+                                            <td style="padding: 15px 20px; border: none; font-weight: 500;">Nominal GSM
+                                                (g/m²)</td>
+                                            <td
+                                                style="padding: 15px 20px; border: none; border-top-right-radius: 8px; border-bottom-right-radius: 8px; font-weight: 600; color: #222;">
+                                                70 / 75 / 80</td>
+                                        </tr>
+                                        <tr class="spec-table-row"
+                                            style="background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.03); border-radius: 8px;">
+                                            <td
+                                                style="padding: 15px 20px; border: none; border-top-left-radius: 8px; border-bottom-left-radius: 8px;">
+                                                2</td>
+                                            <td style="padding: 15px 20px; border: none; font-weight: 500;">Caliper
+                                                (Micron)</td>
+                                            <td
+                                                style="padding: 15px 20px; border: none; border-top-right-radius: 8px; border-bottom-right-radius: 8px; font-weight: 600; color: #222;">
+                                                100 / 102 / 105</td>
+                                        </tr>
+                                        <tr class="spec-table-row"
+                                            style="background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.03); border-radius: 8px;">
+                                            <td
+                                                style="padding: 15px 20px; border: none; border-top-left-radius: 8px; border-bottom-left-radius: 8px;">
+                                                3</td>
+                                            <td style="padding: 15px 20px; border: none; font-weight: 500;">Moisture %
+                                            </td>
+                                            <td
+                                                style="padding: 15px 20px; border: none; border-top-right-radius: 8px; border-bottom-right-radius: 8px; font-weight: 600; color: #222;">
+                                                6.0 ± 0.5</td>
+                                        </tr>
+                                        <tr class="spec-table-row"
+                                            style="background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.03); border-radius: 8px;">
+                                            <td
+                                                style="padding: 15px 20px; border: none; border-top-left-radius: 8px; border-bottom-left-radius: 8px;">
+                                                4</td>
+                                            <td style="padding: 15px 20px; border: none; font-weight: 500;">Cobb 60
+                                                (g/m²) (Max)</td>
+                                            <td
+                                                style="padding: 15px 20px; border: none; border-top-right-radius: 8px; border-bottom-right-radius: 8px; font-weight: 600; color: #222;">
+                                                30</td>
+                                        </tr>
+                                        <tr class="spec-table-row"
+                                            style="background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.03); border-radius: 8px;">
+                                            <td
+                                                style="padding: 15px 20px; border: none; border-top-left-radius: 8px; border-bottom-left-radius: 8px;">
+                                                5</td>
+                                            <td style="padding: 15px 20px; border: none; font-weight: 500;">Bendtsen
+                                                Smoothness TS</td>
+                                            <td
+                                                style="padding: 15px 20px; border: none; border-top-right-radius: 8px; border-bottom-right-radius: 8px; font-weight: 600; color: #222;">
+                                                150 - 250 ml/min</td>
+                                        </tr>
+                                        <tr class="spec-table-row"
+                                            style="background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.03); border-radius: 8px;">
+                                            <td
+                                                style="padding: 15px 20px; border: none; border-top-left-radius: 8px; border-bottom-left-radius: 8px;">
+                                                6</td>
+                                            <td style="padding: 15px 20px; border: none; font-weight: 500;">Porosity
+                                                (Max)</td>
+                                            <td
+                                                style="padding: 15px 20px; border: none; border-top-right-radius: 8px; border-bottom-right-radius: 8px; font-weight: 600; color: #222;">
+                                                650 ml/min</td>
+                                        </tr>
+                                        <tr class="spec-table-row"
+                                            style="background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.03); border-radius: 8px;">
+                                            <td
+                                                style="padding: 15px 20px; border: none; border-top-left-radius: 8px; border-bottom-left-radius: 8px;">
+                                                7</td>
+                                            <td style="padding: 15px 20px; border: none; font-weight: 500;">Brightness
+                                                ISO % (Min)</td>
+                                            <td
+                                                style="padding: 15px 20px; border: none; border-top-right-radius: 8px; border-bottom-right-radius: 8px; font-weight: 600; color: #222;">
+                                                88</td>
+                                        </tr>
+                                        <tr class="spec-table-row"
+                                            style="background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.03); border-radius: 8px;">
+                                            <td
+                                                style="padding: 15px 20px; border: none; border-top-left-radius: 8px; border-bottom-left-radius: 8px;">
+                                                8</td>
+                                            <td style="padding: 15px 20px; border: none; font-weight: 500;">Opacity %
+                                            </td>
+                                            <td
+                                                style="padding: 15px 20px; border: none; border-top-right-radius: 8px; border-bottom-right-radius: 8px; font-weight: 600; color: #222;">
+                                                94</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <!-- Related Products -->
+        <section class="related-product-area pt-20 pb-60" style="background-color: #f8f9fa;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="tg-section-title text-center mb-60">
+                            <span class="sub-title">Explore</span>
+                            <h2 class="title">Other Products</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row related-product-active">
+                    <div class="col-xl-3">
+                        <div class="tg-shop-item text-center">
+                            <div class="tg-shop-thumb">
+                                <a href="product-tnpl-platinum.html"><img src="assets/img/products/tnpl_platinum.png"
+                                        alt="TNPL Platinum" style="height: 250px; object-fit: contain;"></a>
+                            </div>
+                            <div class="tg-shop-content">
+                                <div class="tg-shop-cat">
+                                    <a href="product-tnpl-platinum.html">Premium Paper</a>
+                                </div>
+                                <h4 class="title"><a href="product-tnpl-platinum.html">TNPL Platinum</a></h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3">
+                        <div class="tg-shop-item text-center">
+                            <div class="tg-shop-thumb">
+                                <a href="product-tnpl-copy-crown.html"><img
+                                        src="assets/img/products/tnpl-copycrown.webp" alt="TNPL Copy Crown"
+                                        style="height: 250px; object-fit: contain;"></a>
+                            </div>
+                            <div class="tg-shop-content">
+                                <div class="tg-shop-cat">
+                                    <a href="product-tnpl-copy-crown.html">Bagasse Based</a>
+                                </div>
+                                <h4 class="title"><a href="product-tnpl-copy-crown.html">TNPL Copy Crown</a></h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3">
+                        <div class="tg-shop-item text-center">
+                            <div class="tg-shop-thumb">
+                                <a href="product-tnpl-spectrum.html"><img src="assets/img/products/tnpl_spectrum.png"
+                                        alt="TNPL Spectrum" style="height: 250px; object-fit: contain;"></a>
+                            </div>
+                            <div class="tg-shop-content">
+                                <div class="tg-shop-cat">
+                                    <a href="product-tnpl-spectrum.html">Eco-Friendly</a>
+                                </div>
+                                <h4 class="title"><a href="product-tnpl-spectrum.html">TNPL Spectrum</a></h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3">
+                        <div class="tg-shop-item text-center">
+                            <div class="tg-shop-thumb">
+                                <a href="product-tnpl-platinum.html"><img src="assets/img/products/tnpl_platinum.png"
+                                        alt="TNPL Platinum" style="height: 250px; object-fit: contain;"></a>
+                            </div>
+                            <div class="tg-shop-content">
+                                <div class="tg-shop-cat">
+                                    <a href="product-tnpl-platinum.html">Premium Paper</a>
+                                </div>
+                                <h4 class="title"><a href="product-tnpl-platinum.html">TNPL Platinum</a></h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3">
+                        <div class="tg-shop-item text-center">
+                            <div class="tg-shop-thumb">
+                                <a href="product-tnpl-copy-crown.html"><img
+                                        src="assets/img/products/tnpl-copycrown.webp" alt="TNPL Copy Crown"
+                                        style="height: 250px; object-fit: contain;"></a>
+                            </div>
+                            <div class="tg-shop-content">
+                                <div class="tg-shop-cat">
+                                    <a href="product-tnpl-copy-crown.html">Bagasse Based</a>
+                                </div>
+                                <h4 class="title"><a href="product-tnpl-copy-crown.html">TNPL Copy Crown</a></h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3">
+                        <div class="tg-shop-item text-center">
+                            <div class="tg-shop-thumb">
+                                <a href="product-tnpl-spectrum.html"><img src="assets/img/products/tnpl_spectrum.png"
+                                        alt="TNPL Spectrum" style="height: 250px; object-fit: contain;"></a>
+                            </div>
+                            <div class="tg-shop-content">
+                                <div class="tg-shop-cat">
+                                    <a href="product-tnpl-spectrum.html">Eco-Friendly</a>
+                                </div>
+                                <h4 class="title"><a href="product-tnpl-spectrum.html">TNPL Spectrum</a></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Related Products-end -->
+
+    </main>
+
+
+    <!-- Footer-area -->
+    <footer class="footer-area"
+        style="background: #0A0A0A; color: #fff; padding: 50px 0 30px; position: relative; margin-top: 0;">
+        <!-- Top Shape from Old Design -->
+        <div
+            style="position: absolute; left: 0; top: -22px; width: 100%; height: 53px; background-image: url('assets/img/bg/footer_bg_shape.png'); background-repeat: repeat; background-position: center; z-index: 2;">
+        </div>
+
+        <div class="container" style="position: relative; z-index: 3;">
+            <div class="row align-items-center justify-content-between">
+                <!-- Col 1: Location -->
+                <div class="col-lg-4 col-md-12 mb-4 mb-lg-0 text-center text-lg-start">
+                    <div class="footer-info">
+                        <h4 style="color: #fff; margin-bottom: 5px; font-size: 18px; font-weight: 700;">Aruna & Co.</h4>
+                        <p style="color: #ccc; margin-bottom: 0; font-size: 12px; line-height: 1.4; opacity: 0.8;">
+                            <i class="fas fa-map-marker-alt me-2" style="color: #fff; font-size: 11px;"></i>2/16, Giri
+                            Nagar, Ramapuram,<br>Chennai – 600089
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Col 2: Email -->
+                <div class="col-lg-4 col-md-12 mb-4 mb-lg-0 text-center">
+                    <div class="footer-contact" style="color: #ccc; font-size: 13px; font-weight: 500;">
+                        <a href="mailto:info@arunaco.com"
+                            style="color: inherit; text-decoration: none; transition: color 0.3s;"
+                            onmouseover="this.style.color='#fff'" onmouseout="this.style.color='inherit'">
+                            <i class="fas fa-envelope me-2" style="color: #fff; font-size: 14px;"></i>info@arunaco.com
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Col 3: Contact Number -->
+                <div class="col-lg-4 col-md-12 text-center text-lg-end">
+                    <div class="footer-contact" style="color: #ccc; font-size: 13px; font-weight: 500;">
+                        <a href="tel:+919876543210"
+                            style="color: inherit; text-decoration: none; transition: color 0.3s;"
+                            onmouseover="this.style.color='#fff'" onmouseout="this.style.color='inherit'">
+                            <i class="fas fa-phone-alt me-2" style="color: #fff; font-size: 14px;"></i>+91 98765
+                            43210
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom: Copyright Centered -->
+            <div class="row pt-4 pb-2">
+                <div class="col-12 text-center">
+                    <p class="mb-0" style="color: #ccc; font-size: 11px; opacity: 0.5;">&copy; 2025 Aruna & Co. All
+                        rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer-area-end -->
+
+    <!-- JS here -->
+    <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/jquery.odometer.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

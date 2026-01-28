@@ -1,0 +1,855 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Products - Aruna & Co.</title>
+    <meta name="description"
+        content="Explore our range of high-quality TNPL paper products including Platinum, Spectrum, and Copy Crown.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" type="image/x-icon" href="">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500&display=swap"
+        rel="stylesheet">
+
+    <!-- Preload -->
+    <link rel="preload" href="assets/css/bootstrap.min.css" as="style" fetchpriority="high">
+    <link rel="preload" href="assets/css/style.css" as="style" fetchpriority="high">
+    <link rel="preload" href="assets/css/default.css" as="style" fetchpriority="high">
+    <link rel="preload" href="assets/css/fontawesome-all.min.css" as="style" fetchpriority="high">
+    <link rel="preload" href="assets/css/animate.min.css" as="style" fetchpriority="high">
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/flaticon.css">
+    <link rel="stylesheet" href="assets/css/jquery-ui.css">
+    <link rel="stylesheet" href="assets/css/odometer.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/default.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <style>
+        .footer-widget.widget_nav_menu ul.list-wrap>li {
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .footer-widget.widget_nav_menu ul.list-wrap>li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--tg-secondary-color);
+            font-size: 20px;
+            line-height: 1;
+        }
+
+        /* Accordion Styles for FAQ */
+        .accordion-button:not(.collapsed) {
+            color: #fff;
+            background-color: #39327f;
+            box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .125);
+        }
+
+        .accordion-button:focus {
+            border-color: #39327f;
+            box-shadow: 0 0 0 0.25rem rgba(57, 50, 127, 0.25);
+        }
+
+        .accordion-button {
+            font-weight: 600;
+            color: #222;
+        }
+
+        /* Modern Sidebar Filter Styles */
+        .sidebar-filter-group {
+            display: flex;
+            flex-direction: row;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .filter-option {
+            position: relative;
+            cursor: pointer;
+            width: auto;
+            margin-bottom: 0;
+            min-width: 150px;
+        }
+
+        .filter-option input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+
+        .filter-label {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 20px;
+            background-color: #ffffff;
+            border: 1px solid #eef0f2;
+            border-radius: 10px;
+            font-size: 15px;
+            color: #4a4a4a;
+            font-weight: 600;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+        }
+
+        .filter-label:hover {
+            border-color: #39327f;
+            background-color: #f7fffd;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(57, 50, 127, 0.15);
+            color: #39327f;
+        }
+
+        /* Checked State */
+        .filter-option input:checked+.filter-label {
+            background-color: #39327f;
+            border-color: #39327f;
+            color: #ffffff;
+            box-shadow: 0 8px 25px rgba(57, 50, 127, 0.25);
+            transform: translateY(-2px);
+        }
+
+        /* Check Icon Animation */
+        .filter-label::after {
+            content: '\f00c';
+            /* FontAwesome Check */
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            font-size: 14px;
+            opacity: 0;
+            transform: scale(0.5);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .filter-option input:checked+.filter-label::after {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .product-card {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important;
+            cursor: pointer;
+        }
+
+        .product-card:hover {
+            transform: scale(1.03) translateY(-10px) !important;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2) !important;
+        }
+
+        .product-card .product-thumb img {
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        }
+
+        .product-card:hover .product-thumb img {
+            transform: scale(1.1) translateY(-10px) !important;
+        }
+
+        .product-card .blurred-bg {
+            transition: all 0.6s ease !important;
+        }
+
+        .product-card:hover .blurred-bg {
+            filter: blur(45px) brightness(0.8) !important;
+            transform: scale(1.4) !important;
+        }
+
+        .product-card .title {
+            transition: all 0.4s ease !important;
+        }
+
+        .product-card:hover .title {
+            transform: translateY(-5px);
+            text-shadow: 0 10px 20px rgba(0, 0, 0, 0.4) !important;
+        }
+
+        /* Light Breadcrumb Theme */
+        .breadcrumb-light::before {
+            opacity: 0.1 !important;
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+        }
+
+        .breadcrumb-light .title {
+            color: #39327f !important;
+        }
+
+        .breadcrumb-light .breadcrumb li,
+        .breadcrumb-light .breadcrumb li a {
+            color: #39327f !important;
+        }
+
+        .breadcrumb-light .breadcrumb-item+.breadcrumb-item::before {
+            color: #39327f !important;
+        }
+
+        /* Navigation Menu Color Override for Product Pages */
+        .navigation li a,
+        .navbar-wrap ul li a {
+            color: #000000 !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Pre-loader-start -->
+    <div id="preloader">
+        <div class="tg-cube-grid">
+            <div class="tg-cube tg-cube1"></div>
+            <div class="tg-cube tg-cube2"></div>
+            <div class="tg-cube tg-cube3"></div>
+            <div class="tg-cube tg-cube4"></div>
+            <div class="tg-cube tg-cube5"></div>
+            <div class="tg-cube tg-cube6"></div>
+            <div class="tg-cube tg-cube7"></div>
+            <div class="tg-cube tg-cube8"></div>
+            <div class="tg-cube tg-cube9"></div>
+        </div>
+    </div>
+    <!-- Pre-loader-end -->
+
+    <!-- Scroll-top -->
+    <button class="scroll-top scroll-to-target" data-target="html">
+        <i class="fas fa-angle-up"></i>
+    </button>
+    <!-- Scroll-top-end-->
+
+    <!-- header-area -->
+    <header id="home">
+        <div id="sticky-header" class="menu-area transparent-header light-bg-header">
+            <div class="container custom-container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="menu-wrap">
+                            <nav class="menu-nav">
+                                <div class="logo">
+                                    <a href="index.html">
+                                        <img src="assets/img/logo/aruna_logo.png" alt="Aruna & Co."
+                                            style="max-width: 200px; height: auto;">
+                                    </a>
+                                </div>
+                                <div class="navbar-wrap main-menu d-none d-xl-flex">
+                                    <ul class="navigation">
+                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="about.html">About Us</a></li>
+
+                                        <li class="active"><a href="products.html">Products</a></li>
+                                        <li><a href="blog.html">Blog</a></li>
+                                        <li><a href="faq.html">FAQ</a></li>
+                                        <li><a href="contact.html">Contact</a></li>
+                                    </ul>
+                                </div>
+                                <div class="header-btn d-none d-sm-block">
+                                    <a href="contact.html" class="tg-btn">Enquiry Now</a>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu  -->
+        <div class="mobile-menu">
+            <nav class="menu-box">
+                <div class="close-btn"><i class="fas fa-times"></i></div>
+                <div class="nav-logo">
+                    <a href="index.html">
+                        <h3 style="color: #39327f;">Aruna & Co.</h3>
+                        <p style="color: #222; margin-bottom: 0;">Authorised TNPL Distributor</p>
+                    </a>
+                </div>
+                <div class="menu-outer">
+                    <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
+                </div>
+                <div class="social-links">
+                    <ul class="clearfix">
+                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="menu-backdrop"></div>
+        <!-- End Mobile Menu -->
+
+        <!-- header-search -->
+        <div class="search-popup-wrap" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="search-wrap text-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="search-form">
+                                <form action="#">
+                                    <input type="text" placeholder="Enter your keyword...">
+                                    <button class="search-btn"><i class="flaticon-search"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="search-backdrop"></div>
+        <!-- header-search-end -->
+
+        <!-- offCanvas-start -->
+        <div class="offCanvas-wrap">
+            <div class="offCanvas-toggle"><img src="assets/img/icons/close.png" alt="icon"></div>
+            <div class="offCanvas-body">
+                <div class="offCanvas-content">
+                    <h3 class="title">Premium Quality <span>TNPL Papers</span> for all your printing needs.</h3>
+                    <p>Aruna & Co is a trusted authorised dealer of Tamil Nadu Newsprint & Papers Ltd (TNPL), supplying
+                        high-quality copier and printing papers across Tamil Nadu.</p>
+                </div>
+                <div class="offcanvas-contact">
+                    <h4 class="number">+91 98765 43210</h4>
+                    <h4 class="email">info@arunaco.com</h4>
+                    <p>2/16, Giri Nagar, Ramapuram,<br> Chennai – 600089</p>
+                    <ul class="offcanvas-social list-wrap">
+                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="offCanvas-overlay"></div>
+        <!-- offCanvas-end -->
+
+    </header>
+    <!-- header-area-end -->
+
+
+    <!-- main-area -->
+
+
+    <main class="main-area fix" style="background-color: #ffffff;">
+
+        <!-- breadcrumb-area -->
+        <section class="breadcrumb-area breadcrumb-bg breadcrumb-light pt-60 pb-40"
+            style="background-image: url('assets/img/bg/products_header_bg_light.png');">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-10">
+                        <div class="breadcrumb-content text-center">
+                            <h2 class="title">Our Products</h2>
+                            <nav aria-label="Breadcrumbs" class="breadcrumb-trail">
+                                <ul class="breadcrumb">
+                                    <li class="breadcrumb-item trail-item trail-begin">
+                                        <a href="index.html"><span>Home</span></a>
+                                    </li>
+                                    <li class="breadcrumb-item trail-item trail-end"><span>Products</span></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="video-shape one"><img src="assets/img/others/video_shape01.png" alt="shape"></div>
+            <div class="video-shape two"><img src="assets/img/others/video_shape02.png" alt="shape"></div>
+        </section>
+        <!-- breadcrumb-area-end -->
+
+        <!-- Products Heading Section -->
+        <section class="products-heading pt-30 pb-0">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <!-- Section Heading -->
+
+                        <div class="filter-container"
+                            style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+
+                            <!-- Filter Buttons -->
+                            <div class="filter-buttons" style="display: flex; gap: 15px; flex-wrap: wrap;">
+                                <button class="filter-btn active" data-filter="all"
+                                    style="padding: 12px 28px; border-radius: 25px; border: none; background: #39327f; color: #fff; font-weight: 600; cursor: pointer; transition: all 0.3s; font-size: 14px; display: flex; align-items: center; gap: 8px;">
+                                    All Products <i class="fas fa-check" style="font-size: 12px;"></i>
+                                </button>
+                                <button class="filter-btn" data-filter="paper"
+                                    style="padding: 12px 28px; border-radius: 25px; border: 1px solid #e0e0e0; background: #fff; color: #666; font-weight: 600; cursor: pointer; transition: all 0.3s; font-size: 14px;">
+                                    Paper
+                                </button>
+                                <button class="filter-btn" data-filter="packaging"
+                                    style="padding: 12px 28px; border-radius: 25px; border: 1px solid #e0e0e0; background: #fff; color: #666; font-weight: 600; cursor: pointer; transition: all 0.3s; font-size: 14px;">
+                                    Packaging Board
+                                </button>
+                            </div>
+
+                            <!-- Search Bar -->
+                            <div class="search-container" style="position: relative; min-width: 280px;">
+                                <input type="text" id="productSearch" placeholder="Search products..."
+                                    style="width: 100%; padding: 12px 45px 12px 20px; border-radius: 25px; border: 1px solid #e0e0e0; font-size: 14px; background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+                                <button
+                                    style="position: absolute; right: 15px; top: 50%; transform: translateY(-50%); background: none; border: none; color: #39327f; font-size: 16px; cursor: pointer;">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Grid & Sidebar -->
+        <section id="products" class="product-listing pt-60 pb-0">
+            <div class="container">
+                <div class="row">
+                    <!-- Main Product Grid (Full Width) -->
+                    <div class="col-lg-12">
+
+
+
+                        <div class="tg-shop-wrapper">
+                            <div class="row justify-content-center">
+                                <!-- TNPL Platinum -->
+                                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 product-item" data-category="paper"
+                                    data-name="tnpl platinum">
+                                    <a href="product-tnpl-platinum.html" class="product-card-link"
+                                        style="display: block; text-decoration: none;">
+                                        <div class="product-card mb-0"
+                                            style="position: relative; border-radius: 16px; overflow: hidden; height: 320px; background: #fff; box-shadow: 0 4px 20px rgba(0,0,0,0.07); transition: all 0.4s ease; border: 2px solid #ff9933;">
+
+                                            <!-- Content Overlay -->
+                                            <div
+                                                style="position: relative; z-index: 2; padding: 10px; display: flex; flex-direction: column; align-items: center; justify-content: space-between; height: 100%;">
+                                                <div class="product-thumb"
+                                                    style="width: 100%; height: 270px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                                                    <img src="assets/img/products/tnpl_platinum.png" alt="TNPL Platinum"
+                                                        style="max-width: 95%; height: 260px; object-fit: contain; filter: drop-shadow(0 15px 25px rgba(0,0,0,0.15)); transition: transform 0.4s ease; border-radius: 8px; transform: scale(1.35);"
+                                                        onmouseover="this.style.transform='scale(1.46)'"
+                                                        onmouseout="this.style.transform='scale(1.35)'">
+                                                </div>
+                                                <div class="product-content text-center" style="padding-bottom: 5px;">
+                                                    <h3 class="title"
+                                                        style="font-size: 19px; font-weight: 700; color: #222; margin: 0; letter-spacing: 0.3px;">
+                                                        TNPL Platinum</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <!-- TNPL Spectrum -->
+                                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 product-item" data-category="paper"
+                                    data-name="tnpl spectrum">
+                                    <a href="product-tnpl-spectrum.html" class="product-card-link"
+                                        style="display: block; text-decoration: none;">
+                                        <div class="product-card mb-0"
+                                            style="position: relative; border-radius: 16px; overflow: hidden; height: 320px; background: #fff; box-shadow: 0 4px 20px rgba(0,0,0,0.07); transition: all 0.4s ease; border: 2px solid #ff9933;">
+
+                                            <!-- Content Overlay -->
+                                            <div
+                                                style="position: relative; z-index: 2; padding: 10px; display: flex; flex-direction: column; align-items: center; justify-content: space-between; height: 100%;">
+                                                <div class="product-thumb"
+                                                    style="width: 100%; height: 270px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                                                    <img src="assets/img/products/tnpl_spectrum.png" alt="TNPL Spectrum"
+                                                        style="max-width: 95%; height: 260px; object-fit: contain; filter: drop-shadow(0 15px 25px rgba(0,0,0,0.15)); transition: transform 0.4s ease; border-radius: 8px; transform: scale(1.35);"
+                                                        onmouseover="this.style.transform='scale(1.46)'"
+                                                        onmouseout="this.style.transform='scale(1.35)'">
+                                                </div>
+                                                <div class="product-content text-center" style="padding-bottom: 5px;">
+                                                    <h3 class="title"
+                                                        style="font-size: 19px; font-weight: 700; color: #222; margin: 0; letter-spacing: 0.3px;">
+                                                        TNPL Spectrum</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <!-- TNPL Copy Crown -->
+                                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 product-item" data-category="paper"
+                                    data-name="tnpl copy crown">
+                                    <a href="product-tnpl-copy-crown.html" class="product-card-link"
+                                        style="display: block; text-decoration: none;">
+                                        <div class="product-card mb-0"
+                                            style="position: relative; border-radius: 16px; overflow: hidden; height: 320px; background: #fff; box-shadow: 0 4px 20px rgba(0,0,0,0.07); transition: all 0.4s ease; border: 2px solid #ff9933;">
+
+                                            <!-- Content Overlay -->
+                                            <div
+                                                style="position: relative; z-index: 2; padding: 10px; display: flex; flex-direction: column; align-items: center; justify-content: space-between; height: 100%;">
+                                                <div class="product-thumb"
+                                                    style="width: 100%; height: 270px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                                                    <img src="assets/img/products/tnpl-copycrown.webp"
+                                                        alt="TNPL Copy Crown"
+                                                        style="max-width: 95%; height: 260px; object-fit: contain; filter: drop-shadow(0 15px 25px rgba(0,0,0,0.15)); transition: transform 0.4s ease; border-radius: 8px;"
+                                                        onmouseover="this.style.transform='scale(1.08)'"
+                                                        onmouseout="this.style.transform='scale(1)'">
+                                                </div>
+                                                <div class="product-content text-center" style="padding-bottom: 5px;">
+                                                    <h3 class="title"
+                                                        style="font-size: 19px; font-weight: 700; color: #222; margin: 0; letter-spacing: 0.3px;">
+                                                        TNPL Copy Crown</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- tg-shop-area-end -->
+
+        <!-- bulk-order-area -->
+        <section id="order" class="tg-video-area tg-video-bg jarallax parallax-img" style="padding-top: 120px;">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="bulk-order-img wow fadeInLeft" data-wow-delay=".2s">
+                            <img src="assets/img/others/delivery-man.png" alt="Bulk Order"
+                                style="border-radius: 15px; width: 100%; border: 10px solid #fff;">
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="bulk-order-content wow fadeInRight" data-wow-delay=".2s">
+                            <div class="tg-section-title white mb-30">
+                                <span class="sub-title"
+                                    style="color: #000000; font-weight: 700; text-transform: uppercase; letter-spacing: 2px;">For
+                                    Businesses</span>
+                                <h2 class="title white-text" style="color: #fff;">Bulk Orders & Corporate Supplies</h2>
+                            </div>
+                            <p style="color: #fff;">We specialize in fulfilling large-scale orders for corporate
+                                offices, educational
+                                institutions, and commercial printing presses. Partner with us for reliable supply and
+                                competitive wholesale pricing.</p>
+                            <div class="bulk-features">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="bulk-feature-item mb-30">
+                                            <div class="icon"
+                                                style="color: #000000; font-size: 30px; margin-bottom: 15px;">
+                                                <i class="fas fa-truck"></i>
+                                            </div>
+                                            <h5 class="title"
+                                                style="color: #000000; font-weight: 700; font-size: 20px;">Priority
+                                                Delivery</h5>
+                                            <p style="color: rgba(255,255,255,0.9); font-size: 15px; line-height: 1.6;">
+                                                Fast and scheduled deliveries to keep your
+                                                operations running smoothly.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="bulk-feature-item mb-30">
+                                            <div class="icon"
+                                                style="color: #000000; font-size: 30px; margin-bottom: 15px;">
+                                                <i class="fas fa-tags"></i>
+                                            </div>
+                                            <h5 class="title"
+                                                style="color: #000000; font-weight: 700; font-size: 20px;">Wholesale
+                                                Rates</h5>
+                                            <p style="color: rgba(255,255,255,0.9); font-size: 15px; line-height: 1.6;">
+                                                Exclusive discounts on bulk quantities and recurring
+                                                orders.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="contact.html" class="tg-btn"
+                                style="background: #000000; color: #fff; border: none; padding: 15px 35px; border-radius: 5px; font-weight: 700;">Get
+                                a Bulk
+                                Quote</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- bulk-order-area-end -->
+
+        <!-- product-specs-area -->
+        <section class="product-specs-area pt-100 pb-60" style="background-color: #ffffff;">
+            <div class="container">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-lg-12">
+                        <div class="tg-video-content wow fadeInUp" data-wow-delay=".2s">
+                            <div class="tg-section-title text-center mb-50">
+                                <span class="sub-title">Technical Details</span>
+                                <h2 class="title">Paper Specifications</h2>
+                                <p class="info-one" style="color: #0a0909; margin-top: 15px;">We offer a wide range of
+                                    GSM
+                                    and sizes to suit
+                                    every printing requirement.</p>
+                            </div>
+
+                            <div class="specs-list" style="margin-top: 50px;">
+                                <div class="row justify-content-center">
+                                    <div class="col-md-4 col-sm-6">
+                                        <div class="specs-item mb-30 text-center"
+                                            style="background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%); padding: 35px 25px; border-radius: 20px; box-shadow: 0 5px 20px rgba(57, 50, 127, 0.08); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); border: 1px solid rgba(57, 50, 127, 0.1); min-height: 380px; display: flex; flex-direction: column; justify-content: flex-start;"
+                                            onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 15px 40px rgba(57, 50, 127, 0.15)'; this.style.borderColor='#39327f';"
+                                            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 5px 20px rgba(57, 50, 127, 0.08)'; this.style.borderColor='rgba(57, 50, 127, 0.1)';">
+                                            <div
+                                                style="width: 60px; height: 60px; background: linear-gradient(135deg, #39327f 0%, #5a4fb8 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; box-shadow: 0 8px 20px rgba(57, 50, 127, 0.3);">
+                                                <i class="fas fa-weight" style="color: #fff; font-size: 24px;"></i>
+                                            </div>
+                                            <h5
+                                                style="color: #222; margin-bottom: 20px; font-size: 22px; font-weight: 700; text-align: center;">
+                                                AVAILABLE GSM</h5>
+                                            <div style="text-align: center;">
+                                                <ul class="list-wrap"
+                                                    style="gap: 12px; margin-bottom: 0; display: inline-block; text-align: left; list-style: none; padding: 0;">
+                                                    <li style="padding: 8px 0; font-size: 16px; color: #555; transition: all 0.3s;"
+                                                        onmouseover="this.style.color='#39327f';"
+                                                        onmouseout="this.style.color='#555';">
+                                                        <i class="fas fa-check-circle"
+                                                            style="color: #39327f; margin-right: 12px; font-size: 18px;"></i>70
+                                                        GSM
+                                                    </li>
+                                                    <li style="padding: 8px 0; font-size: 16px; color: #555; transition: all 0.3s;"
+                                                        onmouseover="this.style.color='#39327f';"
+                                                        onmouseout="this.style.color='#555';">
+                                                        <i class="fas fa-check-circle"
+                                                            style="color: #39327f; margin-right: 12px; font-size: 18px;"></i>75
+                                                        GSM
+                                                    </li>
+                                                    <li style="padding: 8px 0; font-size: 16px; color: #555; transition: all 0.3s;"
+                                                        onmouseover="this.style.color='#39327f';"
+                                                        onmouseout="this.style.color='#555';">
+                                                        <i class="fas fa-check-circle"
+                                                            style="color: #39327f; margin-right: 12px; font-size: 18px;"></i>80
+                                                        GSM
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6">
+                                        <div class="specs-item mb-30 text-center"
+                                            style="background: linear-gradient(135deg, #fff8f0 0%, #ffffff 100%); padding: 35px 25px; border-radius: 20px; box-shadow: 0 5px 20px rgba(57, 50, 127, 0.08); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); border: 1px solid rgba(57, 50, 127, 0.1); min-height: 380px; display: flex; flex-direction: column; justify-content: flex-start;"
+                                            onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 15px 40px rgba(57, 50, 127, 0.15)'; this.style.borderColor='#39327f';"
+                                            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 5px 20px rgba(57, 50, 127, 0.08)'; this.style.borderColor='rgba(57, 50, 127, 0.1)';">
+                                            <div
+                                                style="width: 60px; height: 60px; background: linear-gradient(135deg, #ff9800 0%, #ffb74d 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; box-shadow: 0 8px 20px rgba(255, 152, 0, 0.3);">
+                                                <i class="fas fa-ruler-combined"
+                                                    style="color: #fff; font-size: 24px;"></i>
+                                            </div>
+                                            <h5
+                                                style="color: #222; margin-bottom: 20px; font-size: 22px; font-weight: 700; text-align: center;">
+                                                Standard Sizes</h5>
+                                            <div style="text-align: center;">
+                                                <ul class="list-wrap"
+                                                    style="gap: 12px; margin-bottom: 0; display: inline-block; text-align: left; list-style: none; padding: 0;">
+                                                    <li style="padding: 8px 0; font-size: 16px; color: #555; transition: all 0.3s;"
+                                                        onmouseover="this.style.color='#39327f';"
+                                                        onmouseout="this.style.color='#555';">
+                                                        <i class="fas fa-check-circle"
+                                                            style="color: #ff9800; margin-right: 12px; font-size: 18px;"></i>A4
+                                                        (210 × 297 mm)
+                                                    </li>
+                                                    <li style="padding: 8px 0; font-size: 16px; color: #555; transition: all 0.3s;"
+                                                        onmouseover="this.style.color='#39327f';"
+                                                        onmouseout="this.style.color='#555';">
+                                                        <i class="fas fa-check-circle"
+                                                            style="color: #ff9800; margin-right: 12px; font-size: 18px;"></i>A3
+                                                        (297 × 420 mm)
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6">
+                                        <div class="specs-item mb-30 text-center"
+                                            style="background: linear-gradient(135deg, #f0fff4 0%, #ffffff 100%); padding: 35px 25px; border-radius: 20px; box-shadow: 0 5px 20px rgba(57, 50, 127, 0.08); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); border: 1px solid rgba(57, 50, 127, 0.1); min-height: 380px; display: flex; flex-direction: column; justify-content: flex-start;"
+                                            onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 15px 40px rgba(57, 50, 127, 0.15)'; this.style.borderColor='#39327f';"
+                                            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 5px 20px rgba(57, 50, 127, 0.08)'; this.style.borderColor='rgba(57, 50, 127, 0.1)';">
+                                            <div
+                                                style="width: 60px; height: 60px; background: linear-gradient(135deg, #4caf50 0%, #66bb6a 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; box-shadow: 0 8px 20px rgba(76, 175, 80, 0.3);">
+                                                <i class="fas fa-print" style="color: #fff; font-size: 24px;"></i>
+                                            </div>
+                                            <h5
+                                                style="color: #222; margin-bottom: 20px; font-size: 22px; font-weight: 700; text-align: center;">
+                                                Applications</h5>
+                                            <div style="text-align: center;">
+                                                <ul class="list-wrap"
+                                                    style="gap: 12px; margin-bottom: 0; display: inline-block; text-align: left; list-style: none; padding: 0;">
+                                                    <li style="padding: 8px 0; font-size: 16px; color: #555; transition: all 0.3s;"
+                                                        onmouseover="this.style.color='#39327f';"
+                                                        onmouseout="this.style.color='#555';">
+                                                        <i class="fas fa-check-circle"
+                                                            style="color: #4caf50; margin-right: 12px; font-size: 18px;"></i>Laser
+                                                        & Inkjet Printing
+                                                    </li>
+                                                    <li style="padding: 8px 0; font-size: 16px; color: #555; transition: all 0.3s;"
+                                                        onmouseover="this.style.color='#39327f';"
+                                                        onmouseout="this.style.color='#555';">
+                                                        <i class="fas fa-check-circle"
+                                                            style="color: #4caf50; margin-right: 12px; font-size: 18px;"></i>Digital
+                                                        Printing
+                                                    </li>
+                                                    <li style="padding: 8px 0; font-size: 16px; color: #555; transition: all 0.3s;"
+                                                        onmouseover="this.style.color='#39327f';"
+                                                        onmouseout="this.style.color='#555';">
+                                                        <i class="fas fa-check-circle"
+                                                            style="color: #4caf50; margin-right: 12px; font-size: 18px;"></i>Office
+                                                        Documentation
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- product-specs-area-end -->
+
+
+    </main>
+    <!-- main-area-end -->
+
+    <!-- Footer-area -->
+    <footer class="footer-area"
+        style="background: #0A0A0A; color: #fff; padding: 50px 0 20px; position: relative; margin-top: 0;">
+        <!-- Top Shape from Old Design -->
+        <div
+            style="position: absolute; left: 0; top: -22px; width: 100%; height: 53px; background-image: url('assets/img/bg/footer_bg_shape.png'); background-repeat: repeat; background-position: center; z-index: 2;">
+        </div>
+
+        <div class="container" style="position: relative; z-index: 3;">
+            <div class="row align-items-center justify-content-between">
+                <!-- Col 1: Location -->
+                <div class="col-lg-4 col-md-12 mb-4 mb-lg-0 text-center text-lg-start">
+                    <div class="footer-info">
+                        <h4 style="color: #fff; margin-bottom: 5px; font-size: 18px; font-weight: 700;">Aruna & Co.</h4>
+                        <p style="color: #ccc; margin-bottom: 0; font-size: 12px; line-height: 1.4; opacity: 0.8;">
+                            <i class="fas fa-map-marker-alt me-2" style="color: #fff; font-size: 11px;"></i>2/16, Giri
+                            Nagar, Ramapuram,<br>Chennai – 600089
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Col 2: Email -->
+                <div class="col-lg-4 col-md-12 mb-4 mb-lg-0 text-center">
+                    <div class="footer-contact" style="color: #ccc; font-size: 13px; font-weight: 500;">
+                        <a href="mailto:info@arunaco.com"
+                            style="color: inherit; text-decoration: none; transition: color 0.3s;"
+                            onmouseover="this.style.color='#fff'" onmouseout="this.style.color='inherit'">
+                            <i class="fas fa-envelope me-2" style="color: #fff; font-size: 14px;"></i>info@arunaco.com
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Col 3: Contact Number -->
+                <div class="col-lg-4 col-md-12 text-center text-lg-end">
+                    <div class="footer-contact" style="color: #ccc; font-size: 13px; font-weight: 500;">
+                        <a href="tel:+919876543210"
+                            style="color: inherit; text-decoration: none; transition: color 0.3s;"
+                            onmouseover="this.style.color='#fff'" onmouseout="this.style.color='inherit'">
+                            <i class="fas fa-phone-alt me-2" style="color: #fff; font-size: 14px;"></i>+91 98765
+                            43210
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom: Copyright Centered -->
+            <div class="row pt-4 pb-2">
+                <div class="col-12 text-center">
+                    <p class="mb-0" style="color: #ccc; font-size: 11px; opacity: 0.5;">&copy; 2026 Aruna & Co. All
+                        rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer-area-end -->
+
+    <!-- JS here -->
+    <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/jquery.odometer.min.js"></script>
+    <script src="assets/js/jquery.appear.js"></script>
+    <script src="assets/js/jquery.paroller.min.js"></script>
+    <script src="assets/js/jquery.easypiechart.min.js"></script>
+    <script src="assets/js/jquery.inview.min.js"></script>
+    <script src="assets/js/jquery.easing.js"></script>
+    <script src="assets/js/jquery-ui.min.js"></script>
+    <script src="assets/js/svg-inject.min.js"></script>
+    <script src="assets/js/jarallax.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/validator.js"></script>
+    <script src="assets/js/ajax-form.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        $(document).ready(function () {
+            const filterButtons = $('.filter-btn');
+            const productItems = $('.product-item');
+            const searchInput = $('#productSearch');
+
+            function filterProducts() {
+                const activeFilter = $('.filter-btn.active').data('filter');
+                const searchQuery = searchInput.val().toLowerCase();
+
+                productItems.each(function () {
+                    const item = $(this);
+                    const category = item.data('category');
+                    const name = item.data('name');
+
+                    const matchesFilter = activeFilter === 'all' || category === activeFilter;
+                    const matchesSearch = name.includes(searchQuery);
+
+                    if (matchesFilter && matchesSearch) {
+                        item.fadeIn(300);
+                    } else {
+                        item.fadeOut(300);
+                    }
+                });
+            }
+
+            filterButtons.on('click', function () {
+                filterButtons.removeClass('active').css({
+                    'background': '#fff',
+                    'color': '#666',
+                    'border': '1px solid #e0e0e0'
+                });
+
+                $(this).addClass('active').css({
+                    'background': '#39327f',
+                    'color': '#fff',
+                    'border': 'none'
+                });
+
+                // Add/Remove check icon
+                filterButtons.find('i').remove();
+                $(this).append(' <i class="fas fa-check" style="font-size: 12px; margin-left: 8px;"></i>');
+
+                filterProducts();
+            });
+
+            searchInput.on('keyup', function () {
+                filterProducts();
+            });
+        });
+
+        SVGInject(document.querySelectorAll("img.injectable"));
+    </script>
+</body>
+
+</html>
